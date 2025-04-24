@@ -1,0 +1,101 @@
+import React, { useEffect, useState } from 'react';
+import './date-timer-countdown.scss';
+
+export const DateTimerCountdown = ({ inputDate }) => {
+
+  const [dateCountDown, setDateCountDown] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+  const { days, minutes, hours, seconds } = dateCountDown;
+  const friendlyDate = inputDate.toLocaleDateString('es-MX', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric'
+  });
+
+  const updateTime = () => {
+    const getDaysToReachDate = (sourceDate, limitDate) => {
+      const oneDay = 24 * 60 * 60 * 1000;
+      const diffInMilliseconds = limitDate.getTime() - sourceDate.getTime();
+      return diffInMilliseconds / oneDay;
+    }
+
+    const daysRaw = getDaysToReachDate(new Date(), inputDate);
+    const days = daysRaw;
+    const hours = (daysRaw % 1) * 24;
+    const minutes = (hours % 1) * 60;
+    const seconds = (minutes % 1) * 60;
+
+    setDateCountDown({
+      days: Math.floor(days),
+      hours: Math.floor(hours),
+      minutes: Math.floor(minutes),
+      seconds: Math.floor(seconds),
+    })
+  }
+
+  useEffect(() => {
+    updateTime();
+
+    setInterval(() => {
+      updateTime();
+    }, 1_000)
+  }, [])
+
+  return (
+    <div className="date-timer-countdown">
+      <div className="date-timer-countdown__date-container">
+        {friendlyDate}
+      </div>
+      <div className="date-timer-countdown__remaining-time-container">
+
+        {
+          days <= 0 && hours <= 0 && minutes <= 0 && seconds <= 0 ?
+            <div className="date-timer-countdown__block">
+              ¡Es Hoy!
+            </div>
+            :
+            <>
+              <div className="date-timer-countdown__block">
+                <span>
+                  {days}
+                </span>
+                <span>
+                  Días
+                </span>
+              </div>
+              <div className="date-timer-countdown__block">
+                <span>
+                  {hours}
+                </span>
+                <span>
+                  Horas
+                </span>
+              </div>
+              <div className="date-timer-countdown__block">
+                <span>
+                  {minutes}
+                </span>
+                <span>
+                  Minutos
+                </span>
+              </div>
+              <div className="date-timer-countdown__block">
+                <span>
+                  {seconds}
+                </span>
+                <span>
+                  Segundos
+                </span>
+              </div>
+            </>
+        }
+      </div>
+    </div>
+  )
+}

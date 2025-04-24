@@ -1,0 +1,45 @@
+.portrait {
+    background: black;
+
+    * {
+        color: white;
+        text-shadow: 1px 1px 2px black;
+    }
+
+    &__container {
+        color: white;
+        min-height: 100vh;
+        background-image: url('./img/portrait.jpg');
+        background-size: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__black-fade {
+        background: rgba(0, 0, 0, 0.2);
+        min-height: 100vh;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        min-height: 100vh;
+    }
+
+    &__title {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    &__names {
+        text-align: center;
+        font-size: 60px;
+    }
+
+    &__invitation-text {
+        text-align: center;
+        font-size: 25px;
+    }
+    
+}

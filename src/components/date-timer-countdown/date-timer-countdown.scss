@@ -1,0 +1,22 @@
+.date-timer-countdown {
+  
+    &__date-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__remaining-time-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-shadow: 1px 1px 2px black;
+    }
+}

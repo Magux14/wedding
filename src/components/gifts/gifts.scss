@@ -1,0 +1,42 @@
+.gifts {
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        background: rgb(233, 228, 224);
+    }
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 30px;
+        color: rgb(160, 136, 86);
+    }
+
+    &__desc {
+        display: flex;
+        justify-content: center;
+        font-size: 15px;
+        color: rgb(95, 90, 76);
+    }
+
+    &__card {
+        display: flex;
+        justify-content: center;
+        background: white;
+        border-radius: 10px;
+        border: 1px solid gray;
+        height: 150px;
+
+        img {
+            height: auto;
+            object-fit: contain;
+        }
+    }
+
+  
+}
