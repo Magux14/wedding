@@ -1,5 +1,10 @@
 $mobileMaxValue: 990px;
 
+@font-face {
+    font-family: "Thesignature";
+    src: url('https://magux14.github.io/boardgames/fonts/Thesignature.otf');
+}
+
 * {
     box-sizing: border-box;
     user-select: none;
@@ -23,4 +28,8 @@ body {
     margin: 0 auto;
     width: 100%;
     overflow: hidden;
+}
+
+:root {
+    --blue: rgb(17, 17, 143);
 }

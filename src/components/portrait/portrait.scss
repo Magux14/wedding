@@ -27,9 +27,31 @@
         min-height: 100vh;
     }
 
+    &__title-container {
+        display: flex;
+        background: white;
+    }
+
     &__title {
         font-size: 35px;
         text-align: center;
+        color: var(--blue);
+        padding: 0 10px;
+        font-family: 'Thesignature', 'Courier New', Courier, monospace;
+    }
+
+    &__title-middle-line-container {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        div {
+            flex: 1;
+        }
+    }
+
+    &__title-middle-line {
+        border-bottom: 1px solid var(--blue);
     }
 
     &__names {
@@ -41,5 +63,5 @@
         text-align: center;
         font-size: 25px;
     }
-    
+
 }
