@@ -1,5 +1,4 @@
-import React from 'react';
-import { DateTimerCountdown } from '../date-timer-countdown/DateTimerCountDown';
+import React, { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import './portrait.scss';
 import { Snow } from '../snow/snow';
@@ -7,6 +6,28 @@ import { Snow } from '../snow/snow';
 export const Portrait = () => {
     const [searchParams] = useSearchParams();
     const invitationText = searchParams.get("inv")
+    const snowRef = useRef(null);
+    const [snowVisible, setSnowVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setSnowVisible(entry.isIntersecting)
+
+            }, {
+            threshold: 0.1
+        }
+        );
+
+        if (snowRef.current) {
+            observer.observe(snowRef.current);
+        }
+
+        return () => {
+            if (snowRef.current) observer.unobserve(snowRef.current);
+        };
+    }, []);
+
     return (
         <div className="portrait portrait__container">
             <div className="portrait__title-container">
@@ -25,11 +46,13 @@ export const Portrait = () => {
                 </div>
             </div>
 
-            <div className="portrait__black-fade">
-                <Snow />
+            <div ref={snowRef} className="portrait__black-fade" >
+                {
+                    snowVisible &&
+                    <Snow />
+                }
 
                 <div className="portrait__content">
-
 
                     <div className="portrait__names">
                         Iztel & Jesús
@@ -42,6 +65,7 @@ export const Portrait = () => {
                     </div> */}
 
                 </div>
+
             </div>
         </div>
     )
