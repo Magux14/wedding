@@ -1,1 +1,34 @@
-.message-from-bride {}
+.message-from-bride {
+
+    &__container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 100px 20%;
+        text-align: center;
+        gap: 20px;
+        background: rgb(248, 248, 255);
+    }
+
+    &__flower-top {
+        position: absolute;
+        margin-top: -30px;
+        margin-left: -40px;
+        top: 0;
+        left: 0;
+        width: 40vw;
+        max-width: 400px;
+        height: auto;
+    }
+
+    &__title {
+        font-size: 25px;
+        color: rgb(28, 28, 80);
+    }
+
+    &__desc {
+        font-size: 20px;
+        color: rgb(28, 28, 80);
+        font-style: italic;
+    }
+}
