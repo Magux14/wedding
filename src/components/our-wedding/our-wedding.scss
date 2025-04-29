@@ -1,0 +1,39 @@
+.our-wedding {
+    background: black;
+
+    * {
+        color: white;
+        text-shadow: 1px 1px 2px black;
+    }
+
+    &__container {
+        color: white;
+        background-image: url('../img/our-wedding.jpg');
+        background-size: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 90vh;
+    }
+
+    &__names {
+        text-align: center;
+        font-family: 'cursiva', 'Courier New', Courier, monospace;
+        font-size: 12vw;
+        margin-top: 40px;
+
+        @media (min-width: 1200px) {
+            font-size: 60px;
+        }
+    }
+
+    &__timer-container {
+        margin-bottom: 20px;
+    }
+
+}

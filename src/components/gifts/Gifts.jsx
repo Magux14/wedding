@@ -21,7 +21,7 @@ export const Gifts = () => {
         window.location.href = url
     }
 
-    const renderCard = (imageName, url) => <div className="gifts__card" onClick={() => handleGoUrl(url)}>
+    const renderCard = (imageName, url) => <div key={`${imageName}`} className="gifts__card" onClick={() => handleGoUrl(url)}>
         <img src={`./img/gifts/${imageName}.png`} alt={`${imageName}`} />
     </div>
 

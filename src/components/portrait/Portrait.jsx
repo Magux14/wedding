@@ -2,6 +2,7 @@ import React from 'react';
 import { DateTimerCountdown } from '../date-timer-countdown/DateTimerCountDown';
 import { useSearchParams } from 'react-router-dom';
 import './portrait.scss';
+import { Snow } from '../snow/snow';
 
 export const Portrait = () => {
     const [searchParams] = useSearchParams();
@@ -25,6 +26,8 @@ export const Portrait = () => {
             </div>
 
             <div className="portrait__black-fade">
+                <Snow />
+
                 <div className="portrait__content">
 
 
@@ -37,10 +40,6 @@ export const Portrait = () => {
                         <br />
                         {invitationText}
                     </div> */}
-
-                    <div className="portrait__timer-container">
-                        <DateTimerCountdown inputDate={new Date(2026, 0, 23, 11, 0, 0)} />
-                    </div>
 
                 </div>
             </div>

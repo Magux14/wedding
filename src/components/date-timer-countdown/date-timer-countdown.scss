@@ -14,10 +14,10 @@
     &__remaining-time-container {
         display: flex;
         justify-content: center;
-        background: rgba(29, 29, 107, 0.7);
-        margin: 0 20px;
+        background: rgba(15, 15, 31, 0.7);
+        margin: 0 10%;
         border-radius: 10px;
-        padding: 20px;
+        padding: 30px;
     }
 
     &__block {
@@ -32,16 +32,17 @@
     }
 
     &__block-number {
-        font-size: 35px;
+        font-size: 30px;
     }
 
     &__separator {
         display: flex;
-        margin-top: -2px;
-        font-size: 35px;
+        margin-top: 2px;
+        font-size: 25px;
     }
 
     &__text {
         font-size: 15px;
+        padding: 5px 30px;
     }
 }
