@@ -8,7 +8,6 @@
 
     &__container {
         color: white;
-        min-height: 100vh;
         background-image: url('../img/portrait.jpg');
         background-size: 100vh;
         background-position: center;
@@ -16,24 +15,24 @@
     }
 
     &__black-fade {
-        background: rgba(0, 0, 0, 0.2);
-        min-height: 100vh;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(237, 221, 83, 0) 20%);
     }
 
     &__content {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        min-height: 100vh;
+        justify-content: space-between;
+        min-height: 90vh;
     }
 
     &__title-container {
         display: flex;
-        background: white;
+        background: rgb(255, 254, 249);
+        padding: 15px 0;
     }
 
     &__title {
-        font-size: 35px;
+        font-size: 25px;
         text-align: center;
         color: var(--blue);
         padding: 0 10px;
@@ -55,13 +54,22 @@
 
     &__names {
         text-align: center;
-        font-size: 60px;
-        font-family: 'Thesignature', 'Courier New', Courier, monospace;
+        font-family: 'cursiva', 'Courier New', Courier, monospace;
+        font-size: 18vw;
+        margin-top: 20px;
+
+        @media (min-width: 1200px) {
+            font-size: 60px;
+        }
     }
 
     &__invitation-text {
         text-align: center;
         font-size: 25px;
+    }
+
+    &__timer-container {
+        margin-bottom: 20px;
     }
 
 }

@@ -1,5 +1,11 @@
 .date-timer-countdown {
-  
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
     &__date-container {
         display: flex;
         justify-content: center;
@@ -8,7 +14,10 @@
     &__remaining-time-container {
         display: flex;
         justify-content: center;
-        gap: 20px;
+        background: rgba(29, 29, 107, 0.7);
+        margin: 0 20px;
+        border-radius: 10px;
+        padding: 20px;
     }
 
     &__block {
@@ -18,6 +27,21 @@
         align-items: center;
         color: white;
         text-shadow: 1px 1px 2px black;
+        font-size: 15px;
+        margin: 0 10px;
+    }
+
+    &__block-number {
+        font-size: 35px;
+    }
+
+    &__separator {
+        display: flex;
+        margin-top: -2px;
+        font-size: 35px;
+    }
+
+    &__text {
         font-size: 15px;
     }
 }

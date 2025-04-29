@@ -29,16 +29,19 @@ export const Portrait = () => {
 
 
                     <div className="portrait__names">
-                        Iztel y Jesús
+                        Iztel & Jesús
                     </div>
 
-                    <div className="portrait__invitation-text">
+                    {/* <div className="portrait__invitation-text">
                         Invitado(s):
                         <br />
                         {invitationText}
+                    </div> */}
+
+                    <div className="portrait__timer-container">
+                        <DateTimerCountdown inputDate={new Date(2026, 0, 23, 11, 0, 0)} />
                     </div>
 
-                    <DateTimerCountdown inputDate={new Date(2026, 0, 23, 11, 0, 0)} />
                 </div>
             </div>
         </div>

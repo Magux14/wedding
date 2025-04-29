@@ -48,10 +48,8 @@ export const DateTimerCountdown = ({ inputDate }) => {
   }, [])
 
   return (
-    <div className="date-timer-countdown">
-      <div className="date-timer-countdown__date-container">
-        {friendlyDate}
-      </div>
+    <div className="date-timer-countdown date-timer-countdown__container">
+
       <div className="date-timer-countdown__remaining-time-container">
 
         {
@@ -62,31 +60,34 @@ export const DateTimerCountdown = ({ inputDate }) => {
             :
             <>
               <div className="date-timer-countdown__block">
-                <span>
+                <span className="date-timer-countdown__block-number">
                   {days}
                 </span>
                 <span>
                   Días
                 </span>
               </div>
+              <div className="date-timer-countdown__separator">:</div>
               <div className="date-timer-countdown__block">
-                <span>
+                <span className="date-timer-countdown__block-number">
                   {hours}
                 </span>
                 <span>
                   Horas
                 </span>
               </div>
+              <div className="date-timer-countdown__separator">:</div>
               <div className="date-timer-countdown__block">
-                <span>
+                <span className="date-timer-countdown__block-number">
                   {minutes}
                 </span>
                 <span>
                   Minutos
                 </span>
               </div>
+              <div className="date-timer-countdown__separator">:</div>
               <div className="date-timer-countdown__block">
-                <span>
+                <span className="date-timer-countdown__block-number">
                   {seconds}
                 </span>
                 <span>
@@ -95,6 +96,10 @@ export const DateTimerCountdown = ({ inputDate }) => {
               </div>
             </>
         }
+      </div>
+
+      <div className="date-timer-countdown__remaining-time-container date-timer-countdown__text">
+        PARA NUESTRO GRAN DÍA
       </div>
     </div>
   )
