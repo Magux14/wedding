@@ -3,16 +3,17 @@ import './gifts.scss';
 
 const lstStores = [
     {
+        name: 'liverpool',
+        desc: 'Evento: XXXXXXX',
+        url: 'https://www.liverpool.com.mx/'
+    },
+    {
         name: 'amazon',
         url: 'https://www.amazon.com.mx/'
     },
     {
-        name: 'liverpool',
-        url: 'https://www.liverpool.com.mx/'
-    },
-    {
-        name: 'mercado libre',
-        url: 'https://www.mercadolibre.com.mx/'
+        name: 'Lluvia de sobres',
+        desc: 'Es la tradición de regalar sobres con efectivo a los novios durante el evento.',
     },
 ]
 
@@ -21,8 +22,27 @@ export const Gifts = () => {
         window.location.href = url
     }
 
-    const renderCard = (imageName, url) => <div key={`${imageName}`} className="gifts__card" onClick={() => handleGoUrl(url)}>
-        <img src={`./img/gifts/${imageName}.png`} alt={`${imageName}`} />
+    const handleCopyToClipboard = (text) => {
+        navigator.clipboard.writeText(text);
+
+        // Alert the copied text
+        alert('CLABE copiada al portapapeles');
+    }
+
+    const renderCard = (name, desc, url) => <div key={`${name}`} className="gifts__card" >
+        {/* <img src={`./img/gifts/${imageName}.png`} alt={`${imageName}`} /> */}
+        <div className="gifts__card-title">
+            {name}
+        </div>
+        {
+            desc &&
+            <div className="gifts__card-subtitle">
+                {desc}
+            </div>
+        }
+        {
+            url && <button className="main-button" onClick={() => handleGoUrl(url)}>VER REGALOS</button>
+        }
     </div>
 
     return (
@@ -31,11 +51,28 @@ export const Gifts = () => {
                 Mesa de Regalos
             </div>
             <div className="gifts__desc">
-                Para nosotros tu presencia es nuestro mejor regalo, pero si deseas hacernos llegar un obsequio, te sugerimos nuestra mesa de regalos:
+                El regalo más valioso para nosotros es tu precencia, pero si deseas obsequiarnos algo, te compartimos algunas opciones que recibiremos con cariño:
             </div>
             {
-                lstStores.map((item) => renderCard(item.name, item.url))
+                lstStores.map((item) => renderCard(item.name, item.desc, item.url))
             }
+            <div className="gifts__card" >
+                {/* <img src={`./img/gifts/${imageName}.png`} alt={`${imageName}`} /> */}
+                <div className="gifts__card-title">
+                    Transferencia
+                </div>
+                <div className="gifts__card-subtitle">
+                    BBVA
+                    <br />
+                    Jesús Enrique Guzmán Rivera
+                    <br /><br />
+                    CLABE:
+                    <br />
+                    5555555555555
+                    <br /><br />
+                    <button className="main-button" onClick={() => handleCopyToClipboard('5555555555555')}>COPIAR CLABE</button>
+                </div>
+            </div>
         </div>
     )
 }

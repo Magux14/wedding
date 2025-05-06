@@ -10,6 +10,7 @@ export const SalonMap = () => {
     return (
         <div className="salon-map">
             <div className="salon-map__container">
+                <br />
                 <div className="salon-map__title">
                     Cuándo y dónde
                 </div>
