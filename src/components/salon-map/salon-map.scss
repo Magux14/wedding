@@ -1,19 +1,47 @@
 .salon-map {
     &__container {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 20px;
         padding: 20px;
-        background: rgb(241, 241, 241);
+
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 20px;
+        width: fit-content;
+        margin: 0 auto;
+        overflow: hidden;
+        /* importante para que no se desborde */
+    }
+
+    &__container:first-of-type::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        width: 80%;
+        height: 15px;
+        background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2), transparent);
+        filter: blur(6px);
+        pointer-events: none;
     }
 
     &__title {
         display: flex;
         justify-content: center;
-        font-weight: bold;
-        font-size: 30px;
-        color: rgb(160, 136, 86);
+        font-size: 35px;
+        font-family: 'title', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: rgb(15, 15, 44);
+    }
+
+    &__church-container {
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 15%;
+        }
     }
 
     &__sub-title {
@@ -24,12 +52,13 @@
         color: rgb(100, 99, 97);
     }
 
-    &__place-name{
+    &__place-name {
         display: flex;
         justify-content: center;
         font-weight: bold;
-        font-size: 20px;
-        color: rgb(58, 58, 58);
+        font-size: 25px;
+        font-family: 'title', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: rgb(28, 28, 80);
     }
 
     &__desc {
@@ -37,8 +66,12 @@
         flex-direction: column;
         gap: 20px;
         justify-content: center;
+        align-items: center;
         font-size: 15px;
         color: rgb(95, 90, 76);
+        margin: 0 20%;
+        text-align: center;
+        margin-bottom: 40px;
     }
 
     &__salon-map {

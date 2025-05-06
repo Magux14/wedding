@@ -8,33 +8,41 @@ export const SalonMap = () => {
     }
 
     return (
-        <div className="salon-map salon-map__container">
-            <div className="salon-map__title">
-                ¿Dónde Y Cuando?
-            </div>
-            <div className="salon-map__sub-title">
-                Recepción
-            </div>
-            <div className="salon-map__salon-img" />
-            <div className="salon-map__place-name">
-                Six Flags México
-            </div>
-            <div className="salon-map__desc">
-                <div>
-                    <strong>Cuándo:</strong>
-                    <br />
-                    23 de enero de 2025 18:00hrs.
+        <div className="salon-map">
+            <div className="salon-map__container">
+                <div className="salon-map__title">
+                    Cuándo y dónde
                 </div>
-                <div>
+                <div className="salon-map__church-container">
+                    <img src="./img/church.png" alt="church" />
+                </div>
+                <div className="salon-map__place-name">
+                    Parroquia de San Cayetano
+                </div>
+                <div className="salon-map__desc">
+                    Av. Montevideo 323, Lindavista, Gustavo A. Madero, 07300 Ciudad de México, CDMX
+                    <br />
+                    <strong>11:00 AM</strong>
 
-                    <strong>Dirección:</strong>
-                    <br />
-                    <u onClick={() => openGoogleMaps('https://maps.app.goo.gl/msXWLFrqATdTP4Ao7')}>
-                        Carr. Picacho-Ajusco Km 1.5, Jardines del Ajusco, Tlalpan, 14219 Ciudad de México, CDMX
-                    </u>
+                    <button className="main-button" onClick={() => openGoogleMaps('https://maps.app.goo.gl/wZB8hWrR33CyfJdY6')}>VER UBICACIÓN</button>
                 </div>
             </div>
-            <div className="salon-map__salon-map" />
+
+            <div className="salon-map__container">
+                <div className="salon-map__church-container">
+                    <img src="./img/party.png" alt="party" />
+                </div>
+                <div className="salon-map__place-name">
+                    Salón Royal Rizzo
+                </div>
+                <div className="salon-map__desc">
+                    Av. Insurgentes Nte. 1970, Lindavista, Gustavo A. Madero, 07300 Ciudad de México, CDMX
+                    <br />
+                    <strong>6:00 PM</strong>
+
+                    <button className="main-button" onClick={() => openGoogleMaps('https://maps.app.goo.gl/wUgwgTUXvYNgE25M7')}>VER UBICACIÓN</button>
+                </div>
             </div>
+        </div>
     )
 }
