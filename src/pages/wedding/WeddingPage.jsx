@@ -5,6 +5,7 @@ import { Gifts } from '../../components/gifts/Gifts';
 import { SalonMap } from '../../components/salon-map/SalonMap';
 import { OurWedding } from '../../components/our-wedding/OurWedding';
 import { MessageFromBride } from '../../components/message-from-bride/MessageFromBride';
+import { Parents } from '../../components/parents/Parents';
 
 export const WeddingPage = () => {
   return (
@@ -12,6 +13,7 @@ export const WeddingPage = () => {
       <Portrait />
       <MessageFromBride />
       <OurWedding />
+      <Parents />
       <SalonMap />
       <Gifts />
     </div>
