@@ -25,13 +25,13 @@
     &__title {
         font-size: 25px;
         color: rgb(28, 28, 80);
-        font-family: 'title';
+        font-family: 'title', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 
     &__desc {
         padding: 0 10%;
         font-size: 20px;
-        color: rgb(28, 28, 80);
-        font-style: italic;
+        color: rgb(48, 48, 48);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
     }
 }
