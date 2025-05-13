@@ -1,10 +1,10 @@
-.message-from-bride {
+.dress-code {
 
     &__container {
         position: relative;
         display: flex;
         flex-direction: column;
-        padding: 100px 10%;
+        padding: 50px 10%;
         text-align: center;
         gap: 20px;
         background: linear-gradient(0deg, rgba(233, 240, 247, 1) 0%, rgba(255, 255, 255, 1) 98%);
@@ -12,10 +12,11 @@
 
     &__flower-top {
         position: absolute;
-        margin-top: -30px;
-        margin-left: -40px;
-        top: 0;
-        left: 0;
+        margin-bottom: -30px;
+        margin-right: -40px;
+        bottom: 0;
+        right: 0;
+        transform: rotate(180deg);
         width: 40%;
         max-width: 250px;
         height: auto;
@@ -25,7 +26,7 @@
     &__title {
         font-size: 25px;
         color: rgb(28, 28, 80);
-        font-family: 'title';
+        font-family: 'title', 'Courier New', Courier, monospace;
     }
 
     &__desc {
@@ -33,5 +34,11 @@
         font-size: 20px;
         color: rgb(28, 28, 80);
         font-style: italic;
+    }
+
+    &__example-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
     }
 }

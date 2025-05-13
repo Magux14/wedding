@@ -64,11 +64,13 @@ export const Gifts = () => {
                 <div className="gifts__card-subtitle">
                     BBVA
                     <br />
-                    Jesús Enrique Guzmán Rivera
+                    Itzel Alejandra Bernal Ortiz
                     <br /><br />
                     CLABE:
                     <br />
-                    5555555555555
+                    0121 8001 5903 2318 08
+                    <br /><br />
+                    Concepto: Donativo
                     <br /><br />
                     <button className="main-button" onClick={() => handleCopyToClipboard('5555555555555')}>COPIAR CLABE</button>
                 </div>

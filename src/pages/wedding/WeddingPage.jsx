@@ -6,6 +6,7 @@ import { SalonMap } from '../../components/salon-map/SalonMap';
 import { OurWedding } from '../../components/our-wedding/OurWedding';
 import { MessageFromBride } from '../../components/message-from-bride/MessageFromBride';
 import { Parents } from '../../components/parents/Parents';
+import { DressCode } from '../../components/dress-code/DressCode';
 
 export const WeddingPage = () => {
   return (
@@ -13,9 +14,14 @@ export const WeddingPage = () => {
       <Portrait />
       <MessageFromBride />
       <OurWedding />
+      <DressCode />
       <Parents />
       <SalonMap />
       <Gifts />
+
+      <div className="wedding__last-message">
+        ¡Te esperamos!
+      </div>
     </div>
   )
 }
