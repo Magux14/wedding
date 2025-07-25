@@ -4,12 +4,12 @@ import './gifts.scss';
 const lstStores = [
     {
         name: 'liverpool',
-        desc: 'Evento: XXXXXXX',
-        url: 'https://www.liverpool.com.mx/'
+        desc: 'Evento: 51713122',
+        url: 'https://mesaderegalos.liverpool.com.mx/milistaderegalos/51713122'
     },
     {
-        name: 'amazon',
-        url: 'https://www.amazon.com.mx/'
+        name: 'sears',
+        url: 'https://www.sears.com.mx/'
     },
     {
         name: 'Lluvia de sobres',

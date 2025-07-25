@@ -23,7 +23,7 @@ export const SalonMap = () => {
                 <div className="salon-map__desc">
                     Av. Montevideo 323, Lindavista, Gustavo A. Madero, 07300 Ciudad de México, CDMX
                     <br />
-                    <strong>18:00 hrs</strong>
+                    <strong>17:30 hrs</strong>
 
                     <button className="main-button" onClick={() => openGoogleMaps('https://maps.app.goo.gl/wZB8hWrR33CyfJdY6')}>VER UBICACIÓN</button>
                 </div>

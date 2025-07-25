@@ -5,7 +5,8 @@ import { Snow } from '../snow/snow';
 
 export const Portrait = () => {
     const [searchParams] = useSearchParams();
-    const invitationText = searchParams.get("inv")
+    const invitationText = searchParams.get("inv");
+    const ticketsNum = searchParams.get("tickets");
     const snowRef = useRef(null);
     const [snowVisible, setSnowVisible] = useState(false);
 
@@ -55,17 +56,19 @@ export const Portrait = () => {
                 <div className="portrait__content">
 
                     <div className="portrait__names">
-                        Iztel & Jesús
+                        Itzel & Jesús
                     </div>
-
-                    {/* <div className="portrait__invitation-text">
-                        Invitado(s):
-                        <br />
-                        {invitationText}
-                    </div> */}
-
                 </div>
 
+            </div>
+
+
+            <div className="portrait__invitation-text">
+                Invitado(s):
+                <br />
+                {invitationText}
+                <br />
+                Número de boletos: {ticketsNum}
             </div>
         </div>
     )

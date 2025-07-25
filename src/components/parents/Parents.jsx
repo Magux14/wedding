@@ -12,15 +12,15 @@ export const Parents = () => {
                 <strong>Padres de la novia</strong>
                 <br />
 
-                Jose Luis Benal Cordova
+                José Luis Bernal Cordova
                 <br />
                 María de Lourdes Orna Casas
                 <br /> <br /> <br />
                 <strong>Padres del novio</strong>
                 <br />
-                Eusebo Guzmán Cruz
+                Eusebio Guzmán Cruz
                 <br />
-                Laura Rivera Martinez
+                Laura Rivera Martínez
 
                 <br /><br /> <br />
                 <strong>Nuestros padrinos</strong>
@@ -70,7 +70,7 @@ export const Parents = () => {
 
                     <div className="parents__padrino-text-container">
                         <div>
-                            Sergio Vargas Caballos
+                            Sergio Vargas Ceballos
                         </div>
                         <div>
                             Lourdes Bernal Cordova
@@ -87,10 +87,10 @@ export const Parents = () => {
 
                     <div className="parents__padrino-text-container">
                         <div>
-                            Armando Puente Martinez
+                            Armando Puente Martínez
                         </div>
                         <div>
-                            María Alicia Rivera Mertinez
+                            María Alicia Rivera Martínez
                         </div>
                     </div>
                 </div>
