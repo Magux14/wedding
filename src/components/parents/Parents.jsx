@@ -1,9 +1,12 @@
 import React from 'react';
 import './parents.scss';
+import { Flower } from '../flower/Flower';
 
 export const Parents = () => {
     return (
         <div className="parents parents__container">
+            <Flower position="left" />
+
             <div className="parents__title">
                 Tenemos el honor de invitarlos a nuestro enlace matrimonial con la bendición de Dios y acompalados de nuestros padres y padrinos
             </div>
@@ -112,8 +115,6 @@ export const Parents = () => {
                     </div>
                 </div>
             </div>
-
-            <img src="./img/flower.png" className="parents__flower-bottom" alt="flower" />
         </div>
     )
 }

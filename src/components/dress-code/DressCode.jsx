@@ -1,9 +1,11 @@
+import { Flower } from '../flower/Flower';
 import './dress-code.scss';
 
 export const DressCode = () => {
     return (
         <div className="dress-code dress-code__container">
-            <img src="./img/flower.png" className="dress-code__flower-top" alt="flower" />
+            <Flower position="right" />
+
             <div className="dress-code__title">
                 Dress Code
             </div>

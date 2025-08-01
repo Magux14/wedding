@@ -1,5 +1,6 @@
 import React from 'react';
 import './gifts.scss';
+import { Flower } from '../flower/Flower';
 
 const lstStores = [
     {
@@ -47,6 +48,8 @@ export const Gifts = () => {
 
     return (
         <div className="gifts gifts__container">
+            <Flower position="left" />
+
             <div className="gifts__title">
                 Mesa de Regalos
             </div>

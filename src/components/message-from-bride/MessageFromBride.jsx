@@ -1,10 +1,11 @@
-import React from 'react';
+import { Flower } from '../flower/Flower';
 import './message-from-bride.scss';
 
 export const MessageFromBride = () => {
     return (
         <div className="message-from-bride message-from-bride__container">
-            <img src="./img/flower.png" className="message-from-bride__flower-top" alt="flower" />
+            <Flower position="right" />
+
             <div className="message-from-bride__title">
                 Mensaje de los novios
             </div>

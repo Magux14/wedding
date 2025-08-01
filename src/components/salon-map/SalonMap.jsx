@@ -1,5 +1,5 @@
-import React from 'react';
 import './salon-map.scss';
+import { Flower } from '../flower/Flower';
 
 export const SalonMap = () => {
 
@@ -9,6 +9,7 @@ export const SalonMap = () => {
 
     return (
         <div className="salon-map">
+            <Flower position="right" />
             <div className="salon-map__container">
                 <br />
                 <div className="salon-map__title">
