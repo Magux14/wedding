@@ -32,7 +32,7 @@
         justify-content: center;
         font-size: 35px;
         font-family: 'title', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        color: rgb(15, 15, 44);
+        color: var(--title-color);
     }
 
     &__church-container {
@@ -58,7 +58,7 @@
         font-weight: bold;
         font-size: 25px;
         font-family: 'title', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        color: rgb(28, 28, 80);
+        color: var(--primary-color);
     }
 
     &__desc {

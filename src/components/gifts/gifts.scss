@@ -6,7 +6,7 @@
         justify-content: center;
         gap: 30px;
         padding: 20px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgb(234, 246, 255) 100%);
+        background: var(--background-color-gradient);
     }
 
     &__title {
@@ -15,7 +15,7 @@
         font-weight: bold;
         font-size: 30px;
         font-family: 'title', 'Courier New', Courier, monospace;
-        color: rgb(28, 28, 80);
+        color: var(--primary-color);
     }
 
     &__desc {
@@ -24,7 +24,7 @@
         text-align: center;
         padding: 0 10%;
         font-size: 15px;
-        color: rgb(95, 90, 76);
+        color: var(--gray);
     }
 
     &__card {
@@ -43,29 +43,29 @@
         }
     }
 
-    &__card::after {
-        content: "";
-        position: absolute;
-        bottom: -18px;
-        left: 10%;
-        width: 80%;
-        height: 15px;
-        background: radial-gradient(ellipse at center, rgba(18, 0, 182, 0.151), transparent);
-        filter: blur(6px);
-        pointer-events: none;
-    }
+    // &__card::after {
+    //     content: "";
+    //     position: absolute;
+    //     bottom: -18px;
+    //     left: 10%;
+    //     width: 80%;
+    //     height: 15px;
+    //     background: radial-gradient(ellipse at center, rgba(18, 0, 182, 0.151), transparent);
+    //     filter: blur(6px);
+    //     pointer-events: none;
+    // }
 
     &__card-title {
         font-family: 'title', 'Courier New', Courier, monospace;
         font-size: 30px;
-        color: rgb(28, 28, 80);
+        color: var(--primary-color);
     }
 
     &__card-subtitle {
         font-size: 15px;
         margin: 0 15%;
         text-align: center;
-        color: rgb(110, 110, 110);
+        color: var(--gray);
     }
 
     &__card-title::first-letter {
