@@ -7,11 +7,13 @@ import { OurWedding } from '../../components/our-wedding/OurWedding';
 import { MessageFromBride } from '../../components/message-from-bride/MessageFromBride';
 import { Parents } from '../../components/parents/Parents';
 import { DressCode } from '../../components/dress-code/DressCode';
+import { Invitation } from '../../components/invitation/Invitation';
 
 export const WeddingPage = () => {
   return (
     <div className="wedding container">
       <Portrait />
+      <Invitation/>
       <MessageFromBride />
       <OurWedding />
       <DressCode />

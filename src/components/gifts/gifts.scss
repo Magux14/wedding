@@ -6,7 +6,7 @@
         justify-content: center;
         gap: 30px;
         padding: 20px;
-        background: var(--background-color-gradient);
+        background: var(--tertiary-color);
     }
 
     &__title {
@@ -15,7 +15,7 @@
         font-weight: bold;
         font-size: 30px;
         font-family: 'title', 'Courier New', Courier, monospace;
-        color: var(--primary-color);
+        color: white;
     }
 
     &__desc {
@@ -24,7 +24,7 @@
         text-align: center;
         padding: 0 10%;
         font-size: 15px;
-        color: var(--gray);
+        color: white;
     }
 
     &__card {
@@ -36,6 +36,7 @@
         justify-content: center;
         background: white;
         padding: 20px 10px;
+        border-radius: 8px;
 
         img {
             height: auto;

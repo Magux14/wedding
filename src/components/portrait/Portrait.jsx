@@ -1,12 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
-import './portrait.scss';
+import { useEffect, useRef, useState } from 'react';
 import { Snow } from '../snow/snow';
+import './portrait.scss';
 
 export const Portrait = () => {
-    const [searchParams] = useSearchParams();
-    const invitationText = searchParams.get("inv");
-    const ticketsNum = searchParams.get("tickets");
     const snowRef = useRef(null);
     const [snowVisible, setSnowVisible] = useState(false);
 
@@ -48,10 +44,10 @@ export const Portrait = () => {
             </div>
 
             <div ref={snowRef} className="portrait__black-fade" >
-                {
+                {/* {
                     snowVisible &&
                     <Snow />
-                }
+                } */}
 
                 <div className="portrait__content">
 
@@ -63,13 +59,6 @@ export const Portrait = () => {
             </div>
 
 
-            <div className="portrait__invitation-text">
-                Invitado(s):
-                <br />
-                {invitationText}
-                <br />
-                Número de boletos: {ticketsNum}
-            </div>
         </div>
     )
 }

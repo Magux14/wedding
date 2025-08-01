@@ -1,0 +1,39 @@
+.invitation {
+
+    &__container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 100px 10%;
+        text-align: center;
+        gap: 20px;
+        background: rgb(255, 255, 255);
+        border-bottom: solid 1px rgb(219, 219, 219);
+    }
+
+    &__flower-top {
+        position: absolute;
+        margin-top: -80px;
+        margin-right: -40px;
+        top: 0;
+        right: 0;
+        transform: rotate(180deg);
+        width: 40%;
+        max-width: 250px;
+        height: auto;
+        z-index: 3;
+    }
+
+    &__title {
+        font-size: 25px;
+        color: var(--primary-color);
+        font-family: 'title';
+    }
+
+    &__desc {
+        padding: 0 10%;
+        font-size: 20px;
+        color: var(--primary-color);
+        font-style: italic;
+    }
+}
