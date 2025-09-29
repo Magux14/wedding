@@ -8,10 +8,12 @@ import { Parents } from '../../components/parents/Parents';
 import { DressCode } from '../../components/dress-code/DressCode';
 import { Invitation } from '../../components/invitation/Invitation';
 import { Flower } from '../../components/flower/Flower';
+import { Envelope } from '../../components/envelope/Envelope';
 
 export const WeddingPage = () => {
   return (
     <div className="wedding container">
+      <Envelope/>
       <Portrait />
       <Invitation />
       <MessageFromBride />

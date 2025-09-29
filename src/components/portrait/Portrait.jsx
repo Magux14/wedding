@@ -27,7 +27,7 @@ export const Portrait = () => {
 
     return (
         <div className="portrait portrait__container">
-            <div className="portrait__title-container">
+            {/* <div className="portrait__title-container">
                 <div className="portrait__title-middle-line-container">
                     <div className="portrait__title-middle-line" />
                     <div />
@@ -41,7 +41,7 @@ export const Portrait = () => {
                     <div className="portrait__title-middle-line" />
                     <div />
                 </div>
-            </div>
+            </div> */}
 
             <div ref={snowRef} className="portrait__black-fade" >
                 {/* {
