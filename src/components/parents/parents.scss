@@ -62,11 +62,30 @@
         font-size: 20px;
         color: var(--gray);
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        gap: 20px;
     }
 
     &__padrino-container {
         display: flex;
+    }
+
+    &__padrino-line-container {
+        width: 3px;
+        border-right: 1px solid black;
+    }
+
+    &__circle {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        line-height: 10px;
+        text-align: center;
+        border-radius: 50%;
+        background: var(--title-color);
+        color: white;
+        font-weight: 600;
+        user-select: none;
+        margin-left: -3px;
+        margin-top: 15px;
     }
 
     &__padrino-image-container {
@@ -75,7 +94,7 @@
         justify-content: center;
         align-items: center;
         flex-basis: 40%;
-        padding: 5px 10px;
+        padding: 5px 0 20px 0;
     }
 
     &__padrino-text-container {
@@ -86,6 +105,8 @@
         gap: 5px;
         align-items: center;
         text-align: left;
+        padding-left: 10px;
+        padding-bottom: 20px;
     }
 
     &__flower-top-container {
@@ -97,7 +118,6 @@
     }
 
     &__flower-top-container--inverted {
-
         img {
             transform: rotate(180deg);
         }

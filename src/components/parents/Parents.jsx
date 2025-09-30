@@ -1,8 +1,15 @@
-import React from 'react';
 import './parents.scss';
-import { Flower } from '../flower/Flower';
 
 export const Parents = () => {
+
+    const renderLineOfPadrinos = () => {
+        return (
+            <div className="parents__padrino-line-container">
+                <span className="parents__circle"></span>
+            </div>
+        )
+    }
+
     return (
         <div className="parents parents__container">
 
@@ -54,7 +61,7 @@ export const Parents = () => {
                                 Velación
                             </div> */}
                         </div>
-
+                        {renderLineOfPadrinos()}
                         <div className="parents__padrino-text-container">
                             <div>
                                 Juan Ignacio Bernal Cordova
@@ -72,6 +79,7 @@ export const Parents = () => {
                                 Anillos
                             </div> */}
                         </div>
+                        {renderLineOfPadrinos()}
                         <div className="parents__padrino-text-container">
                             <div>
                                 Albert Abril Gonzalez
@@ -88,7 +96,7 @@ export const Parents = () => {
                                 Arras
                             </div> */}
                         </div>
-
+                        {renderLineOfPadrinos()}
                         <div className="parents__padrino-text-container">
                             <div>
                                 Sergio Vargas Ceballos
@@ -105,7 +113,7 @@ export const Parents = () => {
                                 Lazo
                             </div> */}
                         </div>
-
+                        {renderLineOfPadrinos()}
                         <div className="parents__padrino-text-container">
                             <div>
                                 Armando Puente Martínez
@@ -122,7 +130,7 @@ export const Parents = () => {
                                 Bíblia y Rosario
                             </div> */}
                         </div>
-
+                        {renderLineOfPadrinos()}
                         <div className="parents__padrino-text-container">
                             <div>
                                 Raquel Bernal Cordova
