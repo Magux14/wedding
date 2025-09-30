@@ -4,15 +4,19 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        padding: 100px 10%;
+        padding: 20px 10% 30px 10%;
         text-align: center;
         gap: 20px;
-        background: var(--background-color-gradient);
+        // background: var(--background-color-gradient);
+    }
+
+    .flower__right {
+        top: -150px;
     }
 
     &__flower-top {
         position: absolute;
-        margin-top: -30px;
+        margin-top: -60px;
         margin-left: -40px;
         top: 0;
         left: 0;

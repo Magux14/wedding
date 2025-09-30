@@ -12,12 +12,11 @@
     }
 
     &__remaining-time-container {
+        margin-top: -20px;
         display: flex;
         justify-content: center;
-        background: rgba(15, 15, 31, 0.7);
-        margin: 0 20px;
         border-radius: 10px;
-        padding: 30px;
+        padding: 0 0 70px 0;
     }
 
     &__block {
@@ -25,9 +24,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: white;
-        text-shadow: 1px 1px 2px black;
-        font-size: 15px;
+        font-size: 10px;
         margin: 0 10px;
     }
 
@@ -44,5 +41,37 @@
     &__text {
         font-size: 15px;
         padding: 5px 30px;
+    }
+
+    &__date-text-container {
+        display: flex;
+        flex-direction: column;
+        color: var(--primary-color);
+        font-size: 10px;
+        gap: 10px;
+    }
+
+    &__date-text-day-month-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+    }
+
+    &__date-margin {
+        width: 70px;
+        padding: 8px 15px;
+        border-top: 1px solid var(--primary-color);
+        border-bottom: 1px solid var(--primary-color);
+    }
+
+    &__date-number {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    &__text-center {
+        display: flex;
+        justify-content: center;
     }
 }

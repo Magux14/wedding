@@ -6,11 +6,11 @@ export const MessageFromBride = () => {
         <div className="message-from-bride message-from-bride__container">
             <Flower position="right" />
 
-            <div className="message-from-bride__title">
+            {/* <div className="message-from-bride__title">
                 Mensaje de los novios
-            </div>
+            </div> */}
             <div className="message-from-bride__desc">
-                "Hay momentos que se atesoran en nuestro corazón para siempre; por esta razón, queremos compartir este momento especial contigo"
+                “ Nuestra historia de amor tiene un nuevo capítulo y nada nos haría más felices que compartir este nuevo comienzo con las personas más importantes en nuestras vidas ”
             </div>
         </div>
     )

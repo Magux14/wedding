@@ -9,10 +9,6 @@ const lstStores = [
         url: 'https://mesaderegalos.liverpool.com.mx/milistaderegalos/51713122'
     },
     {
-        name: 'sears',
-        url: 'https://www.sears.com.mx/'
-    },
-    {
         name: 'Lluvia de sobres',
         desc: 'Es la tradición de regalar sobres con efectivo a los novios durante el evento.',
     },

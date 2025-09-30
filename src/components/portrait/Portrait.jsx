@@ -50,10 +50,10 @@ export const Portrait = () => {
                 } */}
 
                 <div className="portrait__content">
-
+                    {/* 
                     <div className="portrait__names">
                         Itzel & Jesús
-                    </div>
+                    </div> */}
                 </div>
 
             </div>

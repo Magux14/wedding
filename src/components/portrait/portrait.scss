@@ -1,5 +1,5 @@
 .portrait {
-    background: black;
+    background: #FAFAFA;
 
     * {
         color: white;
@@ -15,14 +15,15 @@
     }
 
     &__black-fade {
-        background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(237, 221, 83, 0) 20%);
+        // background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(237, 221, 83, 0) 20%);
     }
 
     &__content {
+        margin-top: 2vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        min-height: 100dvh;
+        min-height: 60dvh;
     }
 
     &__title-container {

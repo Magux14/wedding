@@ -8,15 +8,16 @@ import { Parents } from '../../components/parents/Parents';
 import { DressCode } from '../../components/dress-code/DressCode';
 import { Invitation } from '../../components/invitation/Invitation';
 import { Flower } from '../../components/flower/Flower';
-import { Envelope } from '../../components/envelope/Envelope';
+import { DateTimerCountdown } from '../../components/date-timer-countdown/DateTimerCountDown';
 
 export const WeddingPage = () => {
   return (
     <div className="wedding container">
-      <Envelope/>
+      {/* <Envelope/> */}
       <Portrait />
-      <Invitation />
       <MessageFromBride />
+      <DateTimerCountdown inputDate={new Date(2026, 0, 23, 17, 30, 0)} />
+      <Invitation />
       <OurWedding />
       <DressCode />
       <Parents />

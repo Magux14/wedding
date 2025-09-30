@@ -50,6 +50,29 @@ export const DateTimerCountdown = ({ inputDate }) => {
   return (
     <div className="date-timer-countdown date-timer-countdown__container">
 
+      <div className="date-timer-countdown__date-text-container">
+        <div className="date-timer-countdown__date-text-day-month-container">
+          <div className="date-timer-countdown__date-margin">
+            VIERNES
+          </div>
+          <div className="date-timer-countdown__date-number">
+            23
+          </div>
+          <div className="date-timer-countdown__date-margin">
+            ENERO
+          </div>
+
+        </div>
+        <div className="date-timer-countdown__text-center">
+          2026
+        </div>
+      </div>
+
+
+      <div className="date-timer-countdown__text-center">
+        Falta...
+      </div>
+
       <div className="date-timer-countdown__remaining-time-container">
 
         {
@@ -98,9 +121,9 @@ export const DateTimerCountdown = ({ inputDate }) => {
         }
       </div>
 
-      <div className="date-timer-countdown__remaining-time-container date-timer-countdown__text">
+      {/* <div className="date-timer-countdown__remaining-time-container date-timer-countdown__text">
         PARA NUESTRO GRAN DÍA
-      </div>
+      </div> */}
     </div>
   )
 }
