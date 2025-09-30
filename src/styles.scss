@@ -10,9 +10,15 @@ $mobileMaxValue: 990px;
     src: url('https://magux14.github.io/wedding/fonts/vectory-normal.otf');
 }
 
+@font-face {
+    font-family: "general";
+    src: url('https://magux14.github.io/wedding/fonts/TTNorms-Medium.otf');
+}
+
 * {
     box-sizing: border-box;
     user-select: none;
+    font-family: 'general', 'Courier New', Courier, monospace;
 }
 
 .text-center {
@@ -37,7 +43,7 @@ body {
 
 :root {
     --blue: rgb(17, 17, 143);
-    --primary-color: #18795b;
+    --primary-color: rgb(44, 94, 82);
     --background-color-gradient: linear-gradient(to bottom, #fafffd 30%, #e9fff8 70%);
     --seconday-color: #469580;
     --tertiary-color: #95c7ba;

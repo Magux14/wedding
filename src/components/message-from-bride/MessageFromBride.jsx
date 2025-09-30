@@ -10,7 +10,7 @@ export const MessageFromBride = () => {
                 Mensaje de los novios
             </div> */}
             <div className="message-from-bride__desc">
-                “ Nuestra historia de amor tiene un nuevo capítulo y nada nos haría más felices que compartir este nuevo comienzo con las personas más importantes en nuestras vidas ”
+                “Nuestra historia de amor tiene un nuevo capítulo y nada nos haría más felices que compartir este nuevo comienzo con las personas más importantes en nuestras vidas”
             </div>
         </div>
     )
