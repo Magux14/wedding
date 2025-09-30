@@ -1,0 +1,25 @@
+.photos {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        padding: 15px 5px;
+        margin: 5px;
+        border-top: 1px solid var(--title-color);
+        border-bottom: 1px solid var(--title-color);
+    }
+
+    &__row {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        flex-basis: calc(50%);
+
+        img {
+            width: 100%;
+        }
+    }
+}

@@ -4,10 +4,10 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        padding: 50px 10%;
+        padding: 60px 10%;
         text-align: center;
         gap: 20px;
-        background: var(--background-color-gradient);
+        padding-bottom: 80px;
     }
 
     &__flower-top {
@@ -31,14 +31,28 @@
 
     &__desc {
         padding: 0 10%;
-        font-size: 20px;
+        font-size: 12px;
         color: var(--primary-color);
         font-style: italic;
     }
 
     &__example-image {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
+        width: auto;
+        height: 300px;
+    }
+
+    &__img-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__overlap-image {
+        position: absolute;
+        width: 350px;
+    }
+
+    &__above-image {
+        z-index: 1;
     }
 }

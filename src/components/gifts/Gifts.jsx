@@ -44,7 +44,7 @@ export const Gifts = () => {
 
     return (
         <div className="gifts gifts__container">
-            <Flower position="left" />
+            <Flower position="right" />
 
             <div className="gifts__title">
                 Mesa de Regalos

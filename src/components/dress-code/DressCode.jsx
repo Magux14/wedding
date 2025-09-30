@@ -4,20 +4,22 @@ import './dress-code.scss';
 export const DressCode = () => {
     return (
         <div className="dress-code dress-code__container">
-            <Flower position="right" />
+            <Flower position="left" />
 
             <div className="dress-code__title">
                 Dress Code
             </div>
             <div className="dress-code__desc">
-                Formal
+                Vestimenta formal
                 <br />
-                Mujeres:
-                NO color pastel ni blanco.
+                Mujeres:  Con mucho cariño les pedimos no utilizar color blanco, colores pasteles y color verde esmeralda ya que están reservados para la novia
             </div>
 
-            <img className="dress-code__example-image" src={`./img/dress-code.png`} alt={`dress-code`} />
-
+            <div className="dress-code__img-container">
+                <img src="./img/green-paint.png" alt="paint" className="dress-code__overlap-image" />
+                <img className="dress-code__example-image dress-code__above-image" src={`./img/dress-code-woman.png`} alt={`dress-code`} />
+                <img className="dress-code__example-image dress-code__above-image" src={`./img/dress-code-man.png`} alt={`dress-code`} />
+            </div>
         </div>
     )
 }

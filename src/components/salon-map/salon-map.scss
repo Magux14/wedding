@@ -37,15 +37,6 @@
         color: var(--title-color);
     }
 
-    &__church-container {
-        display: flex;
-        justify-content: center;
-
-        img {
-            width: 15%;
-        }
-    }
-
     &__sub-title {
         display: flex;
         justify-content: center;
@@ -88,5 +79,21 @@
         height: 300px;
         background-size: 100% 100%;
         background-repeat: no-repeat;
+    }
+
+    &__overlap-image {
+        position: absolute;
+        width: 80px;
+    }
+
+    &__icon-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__icon {
+        width: 150px;
     }
 }
