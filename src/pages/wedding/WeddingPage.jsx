@@ -9,11 +9,12 @@ import { Invitation } from '../../components/invitation/Invitation';
 import { Flower } from '../../components/flower/Flower';
 import { DateTimerCountdown } from '../../components/date-timer-countdown/DateTimerCountDown';
 import { Photos } from '../../components/photos/Photos';
+import { Envelope } from '../../components/envelope/Envelope';
 
 export const WeddingPage = () => {
   return (
     <div className="wedding container">
-      {/* <Envelope/> */}
+      <Envelope />
       <Portrait />
       <MessageFromBride />
       <DateTimerCountdown inputDate={new Date(2026, 0, 23, 17, 30, 0)} />
