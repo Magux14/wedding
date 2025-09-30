@@ -49,7 +49,7 @@ export const Envelope = ({ setCanScroll }) => {
   if (hidden) return null;
 
   return (
-    <div className={`envelope__overlay ${opened ? 'envelope__overlay--fade' : ''}`} onClick={handleClick}>
+    <div className={`envelope__overlay ${opened ? 'envelope__overlay--fade envelope--opened' : ''}`} onClick={handleClick}>
       <div
         className={`envelope__container ${opened ? 'envelope--opened' : ''}`}
       >
