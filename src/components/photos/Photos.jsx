@@ -4,26 +4,26 @@ export const Photos = () => {
         <div className="photos__container">
             <div className="photos__row">
                 <div className="photos__item">
-                    <img src="./img/photos/1.png" alt="" />
+                    <img src="./img/photos/1.webp" alt="" />
                 </div>
                 <div className="photos__item">
-                    <img src="./img/photos/flower1.png" alt="" style={{ width: '80%', display: 'block', marginLeft: 'auto' }} />
+                    <img src="./img/photos/flower1.webp" alt="" style={{ width: '80%', display: 'block', marginLeft: 'auto' }} />
                 </div>
             </div>
             <div className="photos__row">
                 <div className="photos__item" style={{ justifyContent: 'center', alignItems: 'center' }}>
-                    <img src="./img/photos/flower2.png" alt="" style={{ width: '80%' }} />
+                    <img src="./img/photos/flower2.webp" alt="" style={{ width: '80%' }} />
                 </div>
                 <div className="photos__item">
-                    <img src="./img/photos/2.png" alt="" />
+                    <img src="./img/photos/2.webp" alt="" />
                 </div>
             </div>
             <div className="photos__row">
                 <div className="photos__item">
-                    <img src="./img/photos/3.png" alt="" />
+                    <img src="./img/photos/3.webp" alt="" />
                 </div>
                 <div className="photos__item" style={{ alignItems: 'flex-end' }}>
-                    <img src="./img/photos/flower3.png" alt="" style={{ width: '80%', display: 'block', marginTop: 'auto', }} />
+                    <img src="./img/photos/flower3.webp" alt="" style={{ width: '80%', display: 'block', marginTop: 'auto', }} />
                 </div>
             </div>
         </div>

@@ -14,7 +14,7 @@ export const SalonMap = () => {
                     Cuándo y dónde
                 </div>
                 <div className="salon-map__icon-container">
-                    <img src="./img/green-paint.png" alt="paint" className="salon-map__icon" />
+                    <img src="./img/green-paint.webp" alt="paint" className="salon-map__icon" />
                     <img src="./img/church.png" alt="church" className="salon-map__overlap-image" />
                 </div>
                 <div className="salon-map__place-name">
@@ -31,7 +31,7 @@ export const SalonMap = () => {
 
             <div className="salon-map__container">
                 <div className="salon-map__icon-container">
-                    <img src="./img/green-paint.png" alt="paint" className="salon-map__icon" />
+                    <img src="./img/green-paint.webp" alt="paint" className="salon-map__icon" />
                     <img src="./img/party.png" alt="party" className="salon-map__overlap-image" />
                 </div>
                 <div className="salon-map__place-name">

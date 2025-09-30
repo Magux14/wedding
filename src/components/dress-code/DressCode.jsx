@@ -16,9 +16,9 @@ export const DressCode = () => {
             </div>
 
             <div className="dress-code__img-container">
-                <img src="./img/green-paint.png" alt="paint" className="dress-code__overlap-image" />
-                <img className="dress-code__example-image dress-code__above-image" src={`./img/dress-code-woman.png`} alt={`dress-code`} />
-                <img className="dress-code__example-image dress-code__above-image" src={`./img/dress-code-man.png`} alt={`dress-code`} />
+                <img src="./img/green-paint.webp" alt="paint" className="dress-code__overlap-image" />
+                <img className="dress-code__example-image dress-code__above-image" src={`./img/dress-code-woman.webp`} alt={`dress-code`} />
+                <img className="dress-code__example-image dress-code__above-image" src={`./img/dress-code-man.webp`} alt={`dress-code`} />
             </div>
         </div>
     )

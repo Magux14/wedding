@@ -7,7 +7,7 @@ export const Parents = () => {
         <div className="parents parents__container">
 
             <div className="parents__flower-top-container">
-                <img src="./img/flowers-top.png" alt="church" />
+                <img src="./img/flowers-top.webp" alt="church" />
             </div>
 
             <div className="parents parents__sub-container">
@@ -136,10 +136,10 @@ export const Parents = () => {
             </div>
 
             <div className="parents__flower-top-container parents__flower-top-container--inverted">
-                <img src="./img/flowers-top.png" alt="church" />
+                <img src="./img/flowers-top.webp" alt="church" />
             </div>
             <div className="parents__flower-top-container parents__flower-top-container" style={{ marginTop: '-21px' }}>
-                <img src="./img/flowers-top.png" alt="church" />
+                <img src="./img/flowers-top.webp" alt="church" />
             </div>
         </div>
     )
