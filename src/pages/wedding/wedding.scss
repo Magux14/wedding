@@ -10,4 +10,10 @@
     font-size: 30px;
     font-family: 'cursiva', 'Courier New', Courier, monospace;
   }
+
+  &__not-scroll {
+    overflow: hidden;
+    touch-action: none;
+    overscroll-behavior: none;
+  }
 }

@@ -2,30 +2,44 @@ import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import './envelope.scss';
 
-export const Envelope = () => {
+export const Envelope = ({ setCanScroll }) => {
   const [opened, setOpened] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [searchParams] = useSearchParams();
   const invitationText = searchParams.get("inv") || '-';
   const ticketsNum = searchParams.get("t") || 0;
 
-  const playEnvelope = () => {
+  const loadAudioEnvelope = () => {
     const audio = new Audio('./sounds/opening-envelope.mp4');
-    audio.play();
+    audio.preload = 'auto';
+    return audio;
   }
 
-  const playSong = () => {
+  const playEnvelope = () => {
+    audioEnvelope.play();
+  }
+
+  const loadAudioBackground = () => {
     const audio = new Audio('./sounds/background.mp3');
+    audio.preload = 'auto';
     audio.volume = 0.2;
     audio.loop = true;
-    audio.play();
+    return audio;
   }
+
+  const playBackground = () => {
+    audioBackground.play();
+  }
+
+  let audioEnvelope = loadAudioEnvelope();
+  let audioBackground = loadAudioBackground();
 
   const handleClick = () => {
     setOpened(true);
     playEnvelope();
+    setCanScroll(true);
     setTimeout(() => {
-      playSong();
+      playBackground();
     }, 1_000);
     setTimeout(() => {
       setHidden(true);
@@ -35,10 +49,9 @@ export const Envelope = () => {
   if (hidden) return null;
 
   return (
-    <div className={`envelope__overlay ${opened ? 'envelope__overlay--fade' : ''}`}>
+    <div className={`envelope__overlay ${opened ? 'envelope__overlay--fade' : ''}`} onClick={handleClick}>
       <div
         className={`envelope__container ${opened ? 'envelope--opened' : ''}`}
-        onClick={handleClick}
       >
         <img src="./img/envelope.webp" alt="envelope" />
         {/* <div className="envelope__base"></div>

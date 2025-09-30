@@ -10,11 +10,15 @@ import { Flower } from '../../components/flower/Flower';
 import { DateTimerCountdown } from '../../components/date-timer-countdown/DateTimerCountDown';
 import { Photos } from '../../components/photos/Photos';
 import { Envelope } from '../../components/envelope/Envelope';
+import { useState } from 'react';
 
 export const WeddingPage = () => {
+
+  const [canScroll, setCanScroll] = useState(false);
+
   return (
-    <div className="wedding container">
-      <Envelope />
+    <div className={`wedding container ${canScroll ? '' : 'wedding__not-scroll'}`}>
+      <Envelope setCanScroll={setCanScroll} />
       <Portrait />
       <MessageFromBride />
       <DateTimerCountdown inputDate={new Date(2026, 0, 23, 17, 30, 0)} />
