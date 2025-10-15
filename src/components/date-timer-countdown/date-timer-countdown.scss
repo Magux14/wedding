@@ -1,5 +1,9 @@
 .date-timer-countdown {
 
+    * {
+        color: var(--primary-color);
+    }
+
     &__container {
         display: flex;
         flex-direction: column;

@@ -12,6 +12,16 @@ export const MessageFromBride = () => {
             <div className="message-from-bride__desc">
                 “Nuestra historia de amor tiene un nuevo capítulo y nada nos haría más felices que compartir este nuevo comienzo con las personas más importantes en nuestras vidas”
             </div>
+
+            <img src="./img/anillos portada.webp" alt="" width={70} />
+
+            <div className="message-from-bride__desc">
+                Tenemos el honor de invitarlos a
+            </div>
+
+            <div className="message-from-bride__desc message-from-bride__desc--big">
+                Nuestra Boda
+            </div>
         </div>
     )
 }

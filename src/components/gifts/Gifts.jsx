@@ -4,9 +4,14 @@ import { Flower } from '../flower/Flower';
 
 const lstStores = [
     {
-        name: 'liverpool',
+        imageName: 'liverpool',
         desc: 'Evento: 51713122',
         url: 'https://mesaderegalos.liverpool.com.mx/milistaderegalos/51713122'
+    },
+    {
+        imageName: 'sears',
+        desc: 'Mesa #201235',
+        url: 'https://www.sears.com.mx/Mesa-de-Regalos/201235/Te-invito-a-mi-Boda---Itzel--&-Jesus-',
     },
     {
         name: 'Lluvia de sobres',
@@ -26,8 +31,11 @@ export const Gifts = () => {
         alert('CLABE copiada al portapapeles');
     }
 
-    const renderCard = (name, desc, url) => <div key={`${name}`} className="gifts__card" >
-        {/* <img src={`./img/gifts/${imageName}.png`} alt={`${imageName}`} /> */}
+    const renderCard = (name, desc, url, imageName) => <div key={`${name}`} className="gifts__card" >
+        {
+            imageName &&
+            <img src={`./img/gifts/${imageName}.png`} alt={`${imageName}`} />
+        }
         <div className="gifts__card-title">
             {name}
         </div>
@@ -53,7 +61,7 @@ export const Gifts = () => {
                 El regalo más valioso para nosotros es tu precencia, pero si deseas obsequiarnos algo, te compartimos algunas opciones que recibiremos con cariño:
             </div>
             {
-                lstStores.map((item) => renderCard(item.name, item.desc, item.url))
+                lstStores.map((item) => renderCard(item.name, item.desc, item.url, item.imageName))
             }
             <div className="gifts__card" >
                 {/* <img src={`./img/gifts/${imageName}.png`} alt={`${imageName}`} /> */}

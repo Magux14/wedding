@@ -11,7 +11,7 @@ export const Invitation = () => {
     return (
         <div className="invitation invitation__container">
             <Flower position="left" />
-            <div className="portrait__invitation-text">
+            <div>
                 Invitado(s):
                 <br />
                 {invitationText}

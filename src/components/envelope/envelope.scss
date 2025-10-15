@@ -89,7 +89,7 @@
 
   &--opened {
     img {
-      transform: rotateZ(10deg) rotateY(-20deg) rotateZ(10deg);
+      animation: rotate 1s ease forwards;
     }
   }
 
@@ -100,5 +100,15 @@
     align-items: center;
     color: white;
     gap: 10px;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotateZ(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+    to {
+      transform: rotateZ(10deg) rotateY(-20deg) rotateZ(10deg);
+    }
   }
 }

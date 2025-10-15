@@ -4,6 +4,8 @@
         position: relative;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         padding: 20px 10px 30px 10px;
         text-align: center;
         gap: 20px;
@@ -37,5 +39,9 @@
         font-size: 20px;
         color: var(--primary-color);
         font-family: 'cursiva', 'Courier New', Courier, monospace;
+    }
+
+    &__desc--big {
+        font-size: 50px;
     }
 }
