@@ -35,6 +35,9 @@ export const Envelope = ({ setCanScroll }) => {
   let audioBackground = loadAudioBackground();
 
   const handleClick = () => {
+    if (opened) {
+      return;
+    }
     setOpened(true);
     playEnvelope();
     setCanScroll(true);
