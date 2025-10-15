@@ -1,3 +1,4 @@
+import { Flower } from '../flower/Flower';
 import './salon-map.scss';
 
 export const SalonMap = () => {
@@ -8,7 +9,6 @@ export const SalonMap = () => {
 
     return (
         <div className="salon-map">
-
             <div className="salon-map__container">
                 <div className="salon-map__title">
                     Cuándo y dónde

@@ -6,11 +6,12 @@ import { MessageFromBride } from '../../components/message-from-bride/MessageFro
 import { Parents } from '../../components/parents/Parents';
 import { DressCode } from '../../components/dress-code/DressCode';
 import { Invitation } from '../../components/invitation/Invitation';
-import { Flower } from '../../components/flower/Flower';
 import { DateTimerCountdown } from '../../components/date-timer-countdown/DateTimerCountDown';
 import { Photos } from '../../components/photos/Photos';
 import { Envelope } from '../../components/envelope/Envelope';
 import { useState } from 'react';
+import { LastMessage } from '../../components/last-message/LastMessage';
+import { PhotoVideo } from '../../components/photo-video/PhotoVideo';
 
 export const WeddingPage = () => {
 
@@ -25,14 +26,11 @@ export const WeddingPage = () => {
       <Invitation />
       <Photos />
       <Parents />
+      <PhotoVideo />
       <SalonMap />
       <DressCode />
       <Gifts />
-
-      <div className="wedding__last-message">
-        <Flower position="left" />
-        ¡Te esperamos!
-      </div>
+      <LastMessage />
     </div>
   )
 }

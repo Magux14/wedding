@@ -1,0 +1,10 @@
+.photo-video {
+    &__container {
+        padding: 20px 0 20px 0;
+        display: flex;
+
+        video {
+            width: 100%;
+        }
+    }
+}
