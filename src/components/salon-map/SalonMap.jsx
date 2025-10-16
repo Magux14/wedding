@@ -40,7 +40,7 @@ export const SalonMap = () => {
                 <div className="salon-map__desc">
                     Av. Insurgentes Nte. 1970, Lindavista, Gustavo A. Madero, 07300 Ciudad de México, CDMX
                     <br />
-                    <strong>Hora de la cita: 19:15 hrs.</strong>
+                    <strong>Hora de la cita: 19:00 hrs.</strong>
 
                     <button className="main-button" onClick={() => openGoogleMaps('https://maps.app.goo.gl/wUgwgTUXvYNgE25M7')}>VER UBICACIÓN</button>
                 </div>

@@ -19,7 +19,7 @@ export const Parents = () => {
 
             <div className="parents parents__sub-container">
                 <div className="parents__title">
-                    Tenemos el honor de invitarlos a nuestro enlace matrimonial  con la bendición de Dios y acompañado de nuestros padres y padrinos.
+                    Con la bendición de Dios y acompañado de nuestros padres y padrinos.
                 </div>
                 <div className="parents__parents-container">
                     <div className="parents__parents-family-container parents__general-font">
@@ -30,7 +30,7 @@ export const Parents = () => {
                             José Luis Bernal Cordova
                         </div>
                         <div>
-                            María de Lourdes Orna Casas
+                            María de Lourdes Ortiz Casas
                         </div>
                     </div>
 

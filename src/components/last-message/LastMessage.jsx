@@ -22,6 +22,10 @@ export const LastMessage = () => {
                 Te pedimos confirmar tu asistencia con el siguiente formulario.
             </div>
 
+            <div className="last-message__text-container">
+                <a href="https://forms.gle/SP1AyFtpXLQqtft7A">Click Aquí</a>
+            </div>
+
             <img src="./img/photos/5.webp" alt="" />
 
             <div className="last-message__text-container last-message__text--big">
