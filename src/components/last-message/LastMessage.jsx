@@ -3,7 +3,7 @@ import './last-message.scss';
 
 export const LastMessage = () => {
     return (
-        <div className="last-message__container">
+        <div className="last-message__container cursive">
             <Flower position="left" />
 
             <div className="last-message__image-and-text-container">

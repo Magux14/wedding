@@ -9,7 +9,8 @@ $mobileMaxValue: 990px;
 @font-face {
     font-family: "cursiva";
     src: url('https://magux14.github.io/wedding/fonts/Amoresa.ttf');
-    size-adjust: 150%;
+    size-adjust: 120%;
+    line-height: 5px;
 }
 
 @font-face {
@@ -94,5 +95,11 @@ body {
 }
 
 .subtitle {
-    font-size: 3rem;
+    font-size: 2.5rem;
+}
+
+.cursive,
+.cursive * {
+    font-family: 'cursiva';
+    line-height: 150%;
 }

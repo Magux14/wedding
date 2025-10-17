@@ -18,7 +18,7 @@ export const Parents = () => {
             </div>
 
             <div className="parents parents__sub-container">
-                <div className="parents__title">
+                <div className="parents__title cursive">
                     Con la bendición de Dios y acompañado de nuestros padres y padrinos.
                 </div>
                 <div className="parents__parents-container">

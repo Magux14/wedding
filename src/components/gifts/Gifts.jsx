@@ -21,7 +21,7 @@ const lstStores = [
 
 export const Gifts = () => {
     const handleGoUrl = (url) => {
-        window.location.href = url
+        window.open(url, '_blank');
     }
 
     const handleCopyToClipboard = (text) => {

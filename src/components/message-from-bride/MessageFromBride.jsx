@@ -3,7 +3,7 @@ import './message-from-bride.scss';
 
 export const MessageFromBride = () => {
     return (
-        <div className="message-from-bride message-from-bride__container">
+        <div className="message-from-bride message-from-bride__container cursive">
             <Flower position="right" />
 
             {/* <div className="message-from-bride__title">
@@ -19,7 +19,7 @@ export const MessageFromBride = () => {
                 Tenemos el honor de invitarlos a
             </div>
 
-            <div className="message-from-bride__desc message-from-bride__desc--big">
+            <div className="message-from-bride__desc message-from-bride__desc--big subtitle">
                 Nuestra Boda
             </div>
         </div>

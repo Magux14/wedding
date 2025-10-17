@@ -69,7 +69,7 @@ export const DateTimerCountdown = ({ inputDate }) => {
       </div>
 
 
-      <div className="date-timer-countdown__text-center date-timer-countdown__cursive">
+      <div className="date-timer-countdown__text-center date-timer-countdown__cursive cursive">
         Faltan...
       </div>
 

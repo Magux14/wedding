@@ -6,10 +6,6 @@
         flex-direction: column;
         gap: 20px;
         color: var(--primary-color);
-
-        * {
-            font-family: 'cursiva', 'Courier New', Courier, monospace;
-        }
     }
 
     &__image-and-text-container {
@@ -33,7 +29,6 @@
         align-self: flex-end;
         font-size: 0.8rem;
     }
-
 
     &__text--bigger {
         color: var(--title-color);
