@@ -1,99 +1,84 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import './envelope.scss';
 
 export const Envelope = ({ setCanScroll, hasSound }) => {
   const [opened, setOpened] = useState(false);
   const [hidden, setHidden] = useState(false);
-  const [audioEnvelope, setAudioEnvelope] = useState(false);
-  const [audioBackground, setAudioBackground] = useState(false);
   const [searchParams] = useSearchParams();
   const invitationText = searchParams.get("inv") || '-';
   const ticketsNum = searchParams.get("t") || 0;
 
-  const loadAudioEnvelope = () => {
-    const audio = new Audio('./sounds/opening-envelope.mp4');
-    audio.preload = 'auto';
-    return audio;
-  }
+  // Refs para los audios
+  const audioEnvelopeRef = useRef(null);
+  const audioBackgroundRef = useRef(null);
 
-  const playEnvelope = () => {
-    audioEnvelope.play();
-  }
+  // Cargar audios una sola vez
+  useEffect(() => {
+    audioEnvelopeRef.current = new Audio('./sounds/opening-envelope.mp4');
+    audioEnvelopeRef.current.preload = 'auto';
 
-  const loadAudioBackground = () => {
-    const audio = new Audio('./sounds/background.mp3');
-    audio.preload = 'auto';
-    audio.volume = 0.2;
-    audio.loop = true;
-    return audio;
-  }
+    audioBackgroundRef.current = new Audio('./sounds/background.mp3');
+    audioBackgroundRef.current.preload = 'auto';
+    audioBackgroundRef.current.volume = hasSound ? 0.2 : 0;
+    audioBackgroundRef.current.loop = true;
+  }, []); // se ejecuta solo al montar
 
-  const playBackground = () => {
-    audioBackground.play();
-  }
+  // Ajustar volumen según hasSound
+  useEffect(() => {
+    if (!audioBackgroundRef.current) return;
 
-  const handleClick = () => {
-    if (opened) {
-      return;
-    }
+    // Safari requiere que el volumen se asigne justo antes de play()
+    audioBackgroundRef.current.volume = hasSound ? 0.2 : 0;
+  }, [hasSound]);
+
+  const handleClick = async () => {
+    if (opened) return;
     setOpened(true);
-    playEnvelope();
+
     setCanScroll(true);
-    setTimeout(() => {
-      playBackground();
-    }, 1_000);
-    setTimeout(() => {
-      setHidden(true);
-    }, 2000);
-  };
 
-  useEffect(() => {
-    setAudioEnvelope(loadAudioEnvelope());
-    setAudioBackground(loadAudioBackground());
-  }, []);
-
-  useEffect(() => {
-    if (!audioBackground) return;
-
-    console.log('hasSound: ', hasSound);
-    if (hasSound) {
-      audioBackground.volume = 0.2;
-    } else {
-      audioBackground.volume = 0;
+    // reproducir el sonido del sobre
+    if (audioEnvelopeRef.current) {
+      try {
+        await audioEnvelopeRef.current.play();
+      } catch (e) {
+        console.log('No se pudo reproducir el audio del sobre:', e);
+      }
     }
 
-    console.log(audioBackground);
-  }, [hasSound])
+    // reproducir audio de fondo después de 1 segundo
+    setTimeout(async () => {
+      if (audioBackgroundRef.current) {
+        try {
+          await audioBackgroundRef.current.play();
+        } catch (e) {
+          console.log('No se pudo reproducir el audio de fondo:', e);
+        }
+      }
+    }, 1000);
+
+    // ocultar overlay después de 2 segundos
+    setTimeout(() => setHidden(true), 2000);
+  };
 
   if (hidden) return null;
 
   return (
-    <div className={`envelope__overlay ${opened ? 'envelope__overlay--fade envelope--opened' : ''}`} onClick={handleClick}>
-      <div
-        className={`envelope__container ${opened ? 'envelope--opened' : ''}`}
-      >
+    <div
+      className={`envelope__overlay ${opened ? 'envelope__overlay--fade envelope--opened' : ''}`}
+      onClick={handleClick}
+    >
+      <div className={`envelope__container ${opened ? 'envelope--opened' : ''}`}>
         <img src="./img/envelope.webp" alt="envelope" />
-        {/* <div className="envelope__base"></div>
-        <div className="envelope__flap"></div> */}
-        {/* <div className={`envelope__seal ${opened ? 'envelope__seal--broken' : ''}`}></div> */}
 
         <div className="envelope__invitation-container">
-          <div className="subtitle">
-            Invitado(s):
-          </div>
-          <div className="subtitle">
-            {invitationText}
-          </div>
-          <div className="subtitle">
-            Boletos:
-          </div>
-          <div className="subtitle">
-            {ticketsNum}
-          </div>
+          <div className="subtitle">Invitado(s):</div>
+          <div className="subtitle">{invitationText}</div>
+          <div className="subtitle">Boletos:</div>
+          <div className="subtitle">{ticketsNum}</div>
         </div>
       </div>
-
     </div>
   );
 };
