@@ -16,10 +16,11 @@ import { PhotoVideo } from '../../components/photo-video/PhotoVideo';
 export const WeddingPage = () => {
 
   const [canScroll, setCanScroll] = useState(false);
+  const [hasSound, setHasSound] = useState(true);
 
   return (
     <div className={`wedding container ${canScroll ? '' : 'wedding__not-scroll'}`}>
-      <Envelope setCanScroll={setCanScroll} />
+      <Envelope setCanScroll={setCanScroll} hasSound={hasSound} />
       <Portrait />
       <MessageFromBride />
       <DateTimerCountdown inputDate={new Date(2026, 0, 23, 17, 30, 0)} />
@@ -31,6 +32,17 @@ export const WeddingPage = () => {
       <DressCode />
       <Gifts />
       <LastMessage />
+
+      <div className="wedding__sound-container" onClick={() => setHasSound(prev => !prev)}>
+        {
+          hasSound &&
+          <img src="./icons/volume-on.webp" width={50} height={50} alt="on" />
+        }
+        {
+          !hasSound &&
+          <img src="./icons/volume-off.webp" width={50} height={50} alt="off" />
+        }
+      </div>
     </div>
   )
 }

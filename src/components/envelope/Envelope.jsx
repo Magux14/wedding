@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import './envelope.scss';
 
-export const Envelope = ({ setCanScroll }) => {
+export const Envelope = ({ setCanScroll, hasSound }) => {
   const [opened, setOpened] = useState(false);
   const [hidden, setHidden] = useState(false);
+  const [audioEnvelope, setAudioEnvelope] = useState(false);
+  const [audioBackground, setAudioBackground] = useState(false);
   const [searchParams] = useSearchParams();
   const invitationText = searchParams.get("inv") || '-';
   const ticketsNum = searchParams.get("t") || 0;
@@ -28,11 +30,8 @@ export const Envelope = ({ setCanScroll }) => {
   }
 
   const playBackground = () => {
-    // audioBackground.play();
+    audioBackground.play();
   }
-
-  let audioEnvelope = loadAudioEnvelope();
-  let audioBackground = loadAudioBackground();
 
   const handleClick = () => {
     if (opened) {
@@ -48,6 +47,24 @@ export const Envelope = ({ setCanScroll }) => {
       setHidden(true);
     }, 2000);
   };
+
+  useEffect(() => {
+    setAudioEnvelope(loadAudioEnvelope());
+    setAudioBackground(loadAudioBackground());
+  }, []);
+
+  useEffect(() => {
+    if (!audioBackground) return;
+
+    console.log('hasSound: ', hasSound);
+    if (hasSound) {
+      audioBackground.volume = 0.2;
+    } else {
+      audioBackground.volume = 0;
+    }
+
+    console.log(audioBackground);
+  }, [hasSound])
 
   if (hidden) return null;
 

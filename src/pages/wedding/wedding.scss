@@ -1,5 +1,6 @@
 .wedding {
   background: #FAFAFA;
+  position: relative;
 
   &__last-message {
     position: relative;
@@ -12,5 +13,11 @@
     overflow: hidden;
     touch-action: none;
     overscroll-behavior: none;
+  }
+
+  &__sound-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
   }
 }
