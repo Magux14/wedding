@@ -25,12 +25,7 @@
     &__names {
         text-align: center;
         font-family: 'cursiva', 'Courier New', Courier, monospace;
-        font-size: 12vw;
         margin-top: 40px;
-
-        @media (min-width: 1200px) {
-            font-size: 60px;
-        }
     }
 
     &__timer-container {

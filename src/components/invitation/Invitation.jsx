@@ -12,11 +12,11 @@ export const Invitation = () => {
         <div className="invitation invitation__container">
             <Flower position="left" />
             <div>
-                Invitado(s):
+                <span className="subtitle">Invitado(s):</span>
                 <br />
-                {invitationText}
+                <span className="subtitle">{invitationText}</span>
                 <br /><br />
-                Boletos: {ticketsNum}
+                <span className="subtitle">Boletos: {ticketsNum}</span>
             </div>
         </div>
     )

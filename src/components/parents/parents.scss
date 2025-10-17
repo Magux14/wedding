@@ -40,7 +40,6 @@
     &__general-font,
     &__general-font * {
         color: var(--primary-color);
-        font-size: 12px;
     }
 
     &__title {
@@ -50,14 +49,12 @@
 
     &__desc {
         padding: 0 10%;
-        font-size: 20px;
         color: var(--gray);
     }
 
     &__padrinos-container {
         display: flex;
         flex-direction: column;
-        font-size: 20px;
         color: var(--gray);
     }
 

@@ -10,14 +10,14 @@ export const SalonMap = () => {
     return (
         <div className="salon-map">
             <div className="salon-map__container">
-                <div className="salon-map__title">
-                    Cuándo y dónde
+                <div className="salon-map__title title">
+                    Dónde
                 </div>
                 <div className="salon-map__icon-container">
                     <img src="./img/green-paint.webp" alt="paint" className="salon-map__icon" />
                     <img src="./img/church.png" alt="church" className="salon-map__overlap-image" />
                 </div>
-                <div className="salon-map__place-name">
+                <div className="salon-map__place-name subtitle">
                     Parroquia de San Cayetano
                 </div>
                 <div className="salon-map__desc">
@@ -34,7 +34,7 @@ export const SalonMap = () => {
                     <img src="./img/green-paint.webp" alt="paint" className="salon-map__icon" />
                     <img src="./img/party.png" alt="party" className="salon-map__overlap-image" />
                 </div>
-                <div className="salon-map__place-name">
+                <div className="salon-map__place-name subtitle">
                     Salón Royal Rizzo
                 </div>
                 <div className="salon-map__desc">

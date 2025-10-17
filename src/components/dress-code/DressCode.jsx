@@ -6,7 +6,7 @@ export const DressCode = () => {
         <div className="dress-code dress-code__container">
             <Flower position="left" />
 
-            <div className="dress-code__title">
+            <div className="dress-code__title title">
                 Dress Code
             </div>
             <div className="dress-code__desc">

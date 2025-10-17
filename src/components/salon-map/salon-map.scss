@@ -32,8 +32,6 @@
     &__title {
         display: flex;
         justify-content: center;
-        font-size: 35px;
-        font-family: 'title', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         color: var(--title-color);
     }
 
@@ -41,7 +39,6 @@
         display: flex;
         justify-content: center;
         font-weight: bold;
-        font-size: 25px;
         color: rgb(100, 99, 97);
     }
 
@@ -49,9 +46,8 @@
         display: flex;
         justify-content: center;
         font-weight: bold;
-        font-size: 25px;
-        font-family: 'title', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         color: var(--primary-color);
+        text-align: center;
     }
 
     &__desc {
@@ -60,7 +56,6 @@
         gap: 20px;
         justify-content: center;
         align-items: center;
-        font-size: 15px;
         color: rgb(95, 90, 76);
         margin: 0 20%;
         text-align: center;

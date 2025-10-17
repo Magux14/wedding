@@ -1,13 +1,15 @@
 $mobileMaxValue: 990px;
 
 @font-face {
-    font-family: "cursiva";
+    font-family: "cursivaOld";
     src: url('https://magux14.github.io/wedding/fonts/Allura-Regular.ttf');
+    size-adjust: 150%;
 }
 
 @font-face {
-    font-family: "title";
-    src: url('https://magux14.github.io/wedding/fonts/vectory-normal.otf');
+    font-family: "cursiva";
+    src: url('https://magux14.github.io/wedding/fonts/Nickainley.otf');
+    size-adjust: 150%;
 }
 
 @font-face {
@@ -33,6 +35,7 @@ html {
 body {
     margin: 0;
     background: rgba(0, 0, 0, 0.712);
+    font-size: 1.6rem;
 }
 
 .container {
@@ -61,8 +64,6 @@ body {
     border-radius: 999px;
     padding: 10px 24px;
     font-weight: 600;
-    font-size: 14px;
-    font-family: 'Arial', sans-serif;
     color: #2e2e2e;
     cursor: pointer;
     overflow: hidden;
@@ -86,4 +87,12 @@ body {
 .main-button:active {
     transform: scale(1.03);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-size: 4rem;
+}
+
+.subtitle {
+    font-size: 3rem;
 }

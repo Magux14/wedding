@@ -28,7 +28,7 @@ export const Envelope = ({ setCanScroll }) => {
   }
 
   const playBackground = () => {
-    audioBackground.play();
+    // audioBackground.play();
   }
 
   let audioEnvelope = loadAudioEnvelope();
@@ -62,16 +62,16 @@ export const Envelope = ({ setCanScroll }) => {
         {/* <div className={`envelope__seal ${opened ? 'envelope__seal--broken' : ''}`}></div> */}
 
         <div className="envelope__invitation-container">
-          <div>
+          <div className="subtitle">
             Invitado(s):
           </div>
-          <div>
+          <div className="subtitle">
             {invitationText}
           </div>
-          <div>
+          <div className="subtitle">
             Boletos:
           </div>
-          <div>
+          <div className="subtitle">
             {ticketsNum}
           </div>
         </div>

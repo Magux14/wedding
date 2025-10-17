@@ -36,7 +36,7 @@ export const Gifts = () => {
             imageName &&
             <img src={`./img/gifts/${imageName}.png`} alt={`${imageName}`} />
         }
-        <div className="gifts__card-title">
+        <div className="gifts__card-title subtitle">
             {name}
         </div>
         {
@@ -54,7 +54,7 @@ export const Gifts = () => {
         <div className="gifts gifts__container">
             <Flower position="right" />
 
-            <div className="gifts__title">
+            <div className="gifts__title title">
                 Mesa de Regalos
             </div>
             <div className="gifts__desc">

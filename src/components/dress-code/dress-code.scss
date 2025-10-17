@@ -24,14 +24,11 @@
     }
 
     &__title {
-        font-size: 25px;
         color: var(--title-color);
-        font-family: 'title', 'Courier New', Courier, monospace;
     }
 
     &__desc {
-        padding: 0 10%;
-        font-size: 12px;
+        padding-bottom: 20px;
         color: var(--primary-color);
         font-style: italic;
     }

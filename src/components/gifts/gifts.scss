@@ -14,7 +14,6 @@
         display: flex;
         justify-content: center;
         font-weight: bold;
-        font-size: 30px;
         color: white;
     }
 
@@ -22,8 +21,7 @@
         display: flex;
         justify-content: center;
         text-align: center;
-        padding: 0 10%;
-        font-size: 15px;
+        padding: 0 5%;
         color: white;
     }
 
@@ -58,13 +56,10 @@
     // }
 
     &__card-title {
-        font-family: 'title', 'Courier New', Courier, monospace;
-        font-size: 30px;
         color: var(--primary-color);
     }
 
     &__card-subtitle {
-        font-size: 15px;
         margin: 0 15%;
         text-align: center;
         color: var(--gray);

@@ -29,19 +29,13 @@
     }
 
     &__title {
-        font-size: 25px;
         color: var(--primary-color);
-        font-family: 'title';
     }
 
     &__desc {
         padding: 0 8%;
-        font-size: 20px;
         color: var(--primary-color);
         font-family: 'cursiva', 'Courier New', Courier, monospace;
     }
 
-    &__desc--big {
-        font-size: 50px;
-    }
 }

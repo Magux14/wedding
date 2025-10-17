@@ -28,13 +28,13 @@ export const LastMessage = () => {
 
             <img src="./img/photos/5.webp" alt="" />
 
-            <div className="last-message__text-container last-message__text--big">
+            <div className="last-message__text-container last-message__text--big subtitle">
                 ¡Te esperamos!
                 <br />
                 Con cariño
             </div>
 
-            <div className="last-message__text-container last-message__text--bigger">
+            <div className="last-message__text-container last-message__text--bigger title">
                 Itzel & Jesús
             </div>
 
