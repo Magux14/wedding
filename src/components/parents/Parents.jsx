@@ -26,6 +26,7 @@ export const Parents = () => {
                         <div>
                             <strong>Padres de la novia</strong>
                         </div>
+                        <br />
                         <div >
                             José Luis Bernal Cordova
                         </div>
@@ -38,6 +39,7 @@ export const Parents = () => {
                         <div>
                             <strong>Padres del novio</strong>
                         </div>
+                        <br />
                         <div >
                             Eusebio Guzmán Cruz
                         </div>
@@ -56,7 +58,7 @@ export const Parents = () => {
                 <div className="parents__padrinos-container parents__general-font">
                     <div className="parents__padrino-container">
                         <div className="parents__padrino-image-container">
-                            <img src="./img/padrinos-icons/church.png" alt="church" width={40} height={40} />
+                            <img src="./img/padrinos-icons/church.png" alt="church" width={50} height={50} />
                             {/* <div>
                                 Velación
                             </div> */}
@@ -74,7 +76,7 @@ export const Parents = () => {
                     </div>
                     <div className="parents__padrino-container">
                         <div className="parents__padrino-image-container">
-                            <img src="./img/padrinos-icons/rings.png" alt="rings" width={40} height={30} />
+                            <img src="./img/padrinos-icons/rings.png" alt="rings" width={50} height={40} />
                             {/* <div>
                                 Anillos
                             </div> */}
@@ -91,7 +93,7 @@ export const Parents = () => {
                     </div>
                     <div className="parents__padrino-container">
                         <div className="parents__padrino-image-container">
-                            <img src="./img/padrinos-icons/arras.png" alt="arras" width={40} height={40} />
+                            <img src="./img/padrinos-icons/arras.png" alt="arras" width={50} height={50} />
                             {/* <div>
                                 Arras
                             </div> */}
@@ -108,7 +110,7 @@ export const Parents = () => {
                     </div>
                     <div className="parents__padrino-container">
                         <div className="parents__padrino-image-container">
-                            <img src="./img/padrinos-icons/lazo.png" alt="lazo" width={40} height={40} />
+                            <img src="./img/padrinos-icons/lazo.png" alt="lazo" width={50} height={50} />
                             {/* <div>
                                 Lazo
                             </div> */}
@@ -125,7 +127,7 @@ export const Parents = () => {
                     </div>
                     <div className="parents__padrino-container">
                         <div className="parents__padrino-image-container">
-                            <img src="./img/padrinos-icons/bible.png" alt="bible" width={40} height={30} />
+                            <img src="./img/padrinos-icons/bible.png" alt="bible" width={50} height={40} />
                             {/* <div>
                                 Bíblia y Rosario
                             </div> */}
