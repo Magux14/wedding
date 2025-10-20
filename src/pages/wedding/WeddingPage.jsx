@@ -24,7 +24,7 @@ export const WeddingPage = () => {
       <Portrait />
       <MessageFromBride />
       <DateTimerCountdown inputDate={new Date(2026, 0, 23, 17, 30, 0)} />
-      <Invitation />
+      {/* <Invitation /> */}
       <Photos />
       <Parents />
       <PhotoVideo />

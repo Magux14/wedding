@@ -1,8 +1,9 @@
 .envelope {
+
   &__overlay {
     position: fixed;
     inset: 0;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,10 +16,24 @@
     }
   }
 
+  &__relative-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__names {
+    color: var(--title-color);
+  }
+
   &__container {
     position: relative;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     perspective: 800px;
 
@@ -31,12 +46,16 @@
     /* IE/Edge viejo */
     -webkit-tap-highlight-color: transparent;
     /* Safari/Chrome en móvil */
+  }
 
-    img {
-      width: 80vw;
-      max-width: 500px;
-      height: auto;
-    }
+  &__env-image {
+    width: 80vw;
+    max-width: 500px;
+    height: auto;
+  }
+
+  &__row {
+    text-align: center;
   }
 
   &__base {
@@ -88,7 +107,7 @@
   }
 
   &--opened {
-    img {
+    .envelope__env-image {
       animation: rotate 1s ease forwards;
     }
   }
@@ -99,7 +118,7 @@
     flex-direction: column;
     align-items: center;
     color: var(--primary-color);
-    gap: 10px;
+    gap: 15px;
   }
 
   @keyframes rotate {
@@ -110,5 +129,20 @@
     to {
       transform: rotateZ(10deg) rotateY(-20deg) rotateZ(10deg);
     }
+  }
+
+  .flower__left {
+    transform: rotate(180deg);
+    left: 0;
+    top: 0;
+    margin-left: -10px;
+    margin-top: 0;
+  }
+
+  .flower__right {
+    bottom: -15px !important;
+    top: unset;
+    transform: rotate(0deg);
+    right: 25px;
   }
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import './envelope.scss';
+import { Flower } from '../flower/Flower';
 
 export const Envelope = ({ setCanScroll, hasSound }) => {
   const [opened, setOpened] = useState(false);
@@ -66,18 +67,29 @@ export const Envelope = ({ setCanScroll, hasSound }) => {
 
   return (
     <div
-      className={`envelope__overlay ${opened ? 'envelope__overlay--fade envelope--opened' : ''}`}
+      className={`envelope envelope__overlay ${opened ? 'envelope__overlay--fade envelope--opened' : ''}`}
       onClick={handleClick}
     >
-      <div className={`envelope__container ${opened ? 'envelope--opened' : ''}`}>
-        <img src="./img/envelope.webp" alt="envelope" />
+      <div className="envelope__relative-container">
+        <Flower position={'left'} type={3} />
+        <div className={`envelope__container ${opened ? 'envelope--opened' : ''}`}>
 
-        <div className="envelope__invitation-container">
-          <div className="subtitle">Invitado(s):</div>
-          <div className="subtitle">{invitationText}</div>
-          <div className="subtitle">Boletos:</div>
-          <div className="subtitle">{ticketsNum}</div>
+          <div className="envelope__invitation-container">
+            <div className="envelope__row">NUESTRA BODA</div>
+            <div className="envelope__row envelope__names subtitle cursive">Itzel y Jesús</div>
+            <div className="envelope__row">23-ENERO-2026</div>
+          </div>
+
+          <img src="./img/envelope.webp" alt="envelope" className="envelope__env-image" />
+
+          <div className="envelope__invitation-container">
+            <div className="envelope__row">CLICK PARA ABRIR LA INVITACIÓN</div>
+            <div className="envelope__row">HEMOS RESERVADO</div>
+            <div className="envelope__row subtitle">{ticketsNum}</div>
+            <div className="envelope__row">LUGARES EN SU HONOR</div>
+          </div>
         </div>
+        <Flower position={'right'} type={3} />
       </div>
     </div>
   );
