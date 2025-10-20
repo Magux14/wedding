@@ -7,51 +7,47 @@ export const Envelope = ({ setCanScroll, hasSound }) => {
   const [opened, setOpened] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [searchParams] = useSearchParams();
-  const invitationText = searchParams.get("inv") || '-';
-  const ticketsNum = searchParams.get("t") || 0;
+  const ticketsNum = searchParams.get('t') || 0;
 
-  // Refs para los audios
   const audioEnvelopeRef = useRef(null);
   const audioBackgroundRef = useRef(null);
 
-  // Cargar audios una sola vez
+  // No cargamos audio aún — Safari requiere interacción del usuario primero
   useEffect(() => {
-    audioEnvelopeRef.current = new Audio('./sounds/opening-envelope.mp4');
-    audioEnvelopeRef.current.preload = 'auto';
+    const env = new Audio('./sounds/opening-envelope.mp4');
+    env.preload = 'auto';
+    audioEnvelopeRef.current = env;
 
-    audioBackgroundRef.current = new Audio('./sounds/background.mp3');
-    audioBackgroundRef.current.preload = 'auto';
-    audioBackgroundRef.current.volume = hasSound ? 0.2 : 0;
-    audioBackgroundRef.current.loop = true;
-  }, []); // se ejecuta solo al montar
-
-  // Ajustar volumen según hasSound
-  useEffect(() => {
-    if (!audioBackgroundRef.current) return;
-
-    // Safari requiere que el volumen se asigne justo antes de play()
-    audioBackgroundRef.current.volume = hasSound ? 0.2 : 0;
-  }, [hasSound]);
+    const bg = new Audio('./sounds/background.mp3');
+    bg.preload = 'auto';
+    bg.loop = true;
+    bg.volume = 0; // volumen inicial 0 para Safari
+    audioBackgroundRef.current = bg;
+  }, []);
 
   const handleClick = async () => {
     if (opened) return;
     setOpened(true);
-
     setCanScroll(true);
 
-    // reproducir el sonido del sobre
+    // --- reproducir sonido del sobre ---
     if (audioEnvelopeRef.current) {
       try {
+        audioEnvelopeRef.current.muted = !hasSound;
+        audioEnvelopeRef.current.volume = hasSound ? 1 : 0;
         await audioEnvelopeRef.current.play();
       } catch (e) {
         console.log('No se pudo reproducir el audio del sobre:', e);
       }
     }
 
-    // reproducir audio de fondo después de 1 segundo
+    // --- reproducir música de fondo ---
     setTimeout(async () => {
       if (audioBackgroundRef.current) {
         try {
+          // Safari solo respeta el volumen/mute si se hace dentro del mismo click
+          audioBackgroundRef.current.muted = !hasSound;
+          audioBackgroundRef.current.volume = hasSound ? 0.2 : 0;
           await audioBackgroundRef.current.play();
         } catch (e) {
           console.log('No se pudo reproducir el audio de fondo:', e);
@@ -59,9 +55,17 @@ export const Envelope = ({ setCanScroll, hasSound }) => {
       }
     }, 1000);
 
-    // ocultar overlay después de 2 segundos
     setTimeout(() => setHidden(true), 2000);
   };
+
+  // Si cambia hasSound, ajustar volumen solo si el audio ya fue reproducido
+  useEffect(() => {
+    if (audioBackgroundRef.current) {
+      const bg = audioBackgroundRef.current;
+      bg.muted = !hasSound;
+      bg.volume = hasSound ? 0.2 : 0;
+    }
+  }, [hasSound]);
 
   if (hidden) return null;
 
@@ -71,9 +75,8 @@ export const Envelope = ({ setCanScroll, hasSound }) => {
       onClick={handleClick}
     >
       <div className="envelope__relative-container">
-        <Flower position={'left'} type={3} />
+        <Flower position="left" type={3} />
         <div className={`envelope__container ${opened ? 'envelope--opened' : ''}`}>
-
           <div className="envelope__invitation-container">
             <div className="envelope__row">NUESTRA BODA</div>
             <div className="envelope__row envelope__names subtitle cursive">Itzel y Jesús</div>
@@ -89,7 +92,7 @@ export const Envelope = ({ setCanScroll, hasSound }) => {
             <div className="envelope__row">LUGARES EN SU HONOR</div>
           </div>
         </div>
-        <Flower position={'right'} type={3} />
+        <Flower position="right" type={3} />
       </div>
     </div>
   );
