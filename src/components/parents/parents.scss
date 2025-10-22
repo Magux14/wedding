@@ -96,11 +96,14 @@
         justify-content: center;
         flex-direction: column;
         gap: 5px;
-        align-items: center;
         text-align: center;
-        padding-left: 10px;
+        padding-left: 20px;
         padding-top: 10px;
         padding-bottom: 30px;
+
+        div {
+            text-align: left;
+        }
     }
 
     &__flower-top-container {

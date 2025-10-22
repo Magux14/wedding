@@ -18,7 +18,7 @@ const lstStores = [
     {
         id: 3,
         name: 'Lluvia de sobres',
-        desc: 'Es la tradición de regalar sobres con efectivo a los novios durante el evento.',
+        desc: 'Es tradición de regalar sobres con efectivo a los novios durante el evento.',
     },
 ]
 
@@ -61,7 +61,7 @@ export const Gifts = () => {
                 Mesa de Regalos
             </div>
             <div className="gifts__desc">
-                El regalo más valioso para nosotros es tu precencia, pero si deseas obsequiarnos algo, te compartimos algunas opciones que recibiremos con cariño:
+                El regalo más valioso para nosotros es tu presencia, pero si deseas obsequiarnos algo, te compartimos algunas opciones que recibiremos con cariño:
             </div>
             {
                 lstStores.map((item) => renderCard(item.id, item.name, item.desc, item.url, item.imageName))

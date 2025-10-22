@@ -23,7 +23,7 @@ export const LastMessage = () => {
             </div>
 
             <div className="last-message__text-container">
-                <a href="https://forms.gle/SP1AyFtpXLQqtft7A" target='_black'>Click Aquí</a>
+                <a href="https://forms.gle/SP1AyFtpXLQqtft7A" target='_black'>Haz click aquí</a>
             </div>
 
             <img src="./img/photos/5.webp" alt="" />
